@@ -1,0 +1,32 @@
+{
+  "name": "oss-comments",
+  "version": "0.0.1",
+  "description": "Haravan OSS Comments",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "tslint": "tslint -c ../tslint.json -p tsconfig.json",
+    "build": "cp -r ../client/dist src/public/dist && npm start",
+    "watch": "cp -r ../client/dist src/public/dist && npm start"
+  },
+  "engines": {
+    "node": "~8.x"
+  },
+  "dependencies": {
+    "@okta/oidc-middleware": "^0.1.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "dotenv": "^5.0.1",
+    "express": "~4.16.0",
+    "express-session": "^1.15.6",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "mongoose": "^5.0.17",
+    "morgan": "~1.9.0",
+    "node-sass-middleware": "0.11.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.10.0"
+  }
+}

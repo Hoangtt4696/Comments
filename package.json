@@ -1,0 +1,25 @@
+{
+  "name": "oss-comments",
+  "version": "0.0.1",
+  "description": "Haravan OSS Comments",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "opn-cli": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tslint": "npm run tslint-client && npm run tslint-server",
+    "tslint-client": "cd client && npm run tslint && cd ..",
+    "tslint-server": "cd server && npm run tslint && cd ..",
+    "watch": "concurrently --kill-others \"npm run watch-client\" \"sleep 60 && npm run watch-server\"",
+    "watch-client": "cd client && npm run watch && cd ..",
+    "watch-server": "cd server && npm run watch && cd ..",
+    "build": "npm run build-client && npm run build-server",
+    "build-client": "cd client && npm run build && cd ..",
+    "build-server": "cd server && npm run build && cd .."
+  },
+  "author": "Haravan",
+  "license": "MIT"
+}
